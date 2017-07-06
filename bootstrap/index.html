@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>自由开放</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="index.html" class="navbar-brand logo"><img src="img/logo.png" alt="网站首页"></a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+				<li><a href="information.html"><span class="glyphicon glyphicon-list"></span> 资讯</a></li>
+				<li><a href="case.html"><span class="glyphicon glyphicon-fire"></span> 案例</a></li>
+				<li><a href="about.html"><span class="glyphicon glyphicon-question-sign"></span> 关于</a></li>
+			</ul>	
+		</div>
+	</div>
+</nav>
+
+
+<div id="myCarousel" class="carousel slide">
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item active" style="background:#223240">
+			<img src="img/slide1.png" alt="第一张">
+		</div>
+		<div class="item" style="background:#F5E4DC;">
+			<img src="img/slide2.png" alt="第二张">
+		</div>
+		<div class="item" style="background:#DE2A2D;">
+			<img src="img/slide3.png" alt="第三张">
+		</div>
+	</div>
+	<a href="#myCarousel" data-slide="prev" class="carousel-control left">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a href="#myCarousel" data-slide="next" class="carousel-control right">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+</div>
+
+
+<div class="tab1">
+	<div class="container">
+		<h2 class="tab-h2">「编程的自由没有限制」</h2>
+		<p class="tab-p">任何一个开发网站的码农其实是一个伟大的群体！</p>
+		<div class="row">
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left">
+						<a href="#"><img src="img/tab1-1.png" class="media-object" alt=""></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">学习编程的知识</h4>
+						<p class="text-muted">了解当前主流的前端框架语言就可以了！</p>
+						<p>小编其实为大家介绍如何开发学习！</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left">
+						<a href="#"><img src="img/tab1-2.png" class="media-object" alt=""></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">开发思想</h4>
+						<p class="text-muted">其他：对于算法以及布局的意思！</p>
+						<p>我们：是自由开发的群体！</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left">
+						<a href="#"><img src="img/tab1-3.png" class="media-object" alt=""></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">学习计划</h4>
+						<p class="text-muted">其他：有点功底的人可以自己开发！</p>
+						<p>我们：按照自己的情况设定目标！</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col">
+				<div class="media">
+					<div class="media-left">
+						<a href="#"><img src="img/tab1-4.png" class="media-object" alt=""></a>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">服务人群</h4>
+						<p class="text-muted">其他：度娘里的材料！</p>
+						<p>我们：可以给出建议！</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="tab2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 tab2-img">
+				<img src="img/tab2.png" class="auto img-responsive center-block" alt="">
+			</div>
+			<div class="text col-md-6 col-sm-6 tab2-text">
+				<h3>系统的学习架构</h3>
+				<p>自己更具自己的情况开发网页。</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer id="footer">
+	<div class="container">
+		<p>bootstrap开发项目</p>
+	</div>
+</footer>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	//轮播自动播放
+	$('#myCarousel').carousel({
+		//自动4秒播放
+		interval : 3000,
+	});
+	// //设置垂直居中
+	//设置文字垂直居中，谷歌浏览器加载图片的顺序问题，导致高度无法获取
+	$(window).load(function () {
+		$('.text').eq(0).css('margin-top', ($('.auto').eq(0).height() - $('.text').eq(0).height()) / 2 + 'px');
+	});
+	
+
+	$(window).resize(function () {
+		$('.text').eq(0).css('margin-top', ($('.auto').eq(0).height() - $('.text').eq(0).height()) / 2 + 'px');
+	});
+
+	$(window).load(function () {
+		$('.text').eq(1).css('margin-top', ($('.auto').eq(1).height() - $('.text').eq(1).height()) / 2 + 'px');
+	});
+
+	$(window).resize(function () {
+		$('.text').eq(1).css('margin-top', ($('.auto').eq(1).height() - $('.text').eq(1).height()) / 2 + 'px');
+	});
+
+</script>
+</body>
+</html>
